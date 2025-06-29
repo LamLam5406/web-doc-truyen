@@ -14,7 +14,7 @@ function Login() {
     setThongBao('');
 
     try {
-      const res = await fetch('http://localhost:5000/api/user/login', {
+      const res = await fetch('https://web-doc-truyen.onrender.com/api/user/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -23,7 +23,7 @@ function Login() {
       const data = await res.json();
       if (res.ok) {
         // Gọi API /me để lấy role
-        const meRes = await fetch('http://localhost:5000/api/user/me', {
+        const meRes = await fetch('https://web-doc-truyen.onrender.com/api/user/me', {
           headers: {
             Authorization: `Bearer ${data.token}`
           }

@@ -7,7 +7,7 @@ function TaiKhoan() {
   const [lichSu, setLichSu] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/user/lichsu', {
+    fetch('https://web-doc-truyen.onrender.com/api/user/lichsu', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     })
         .then(res => res.ok ? res.json() : Promise.reject(res))

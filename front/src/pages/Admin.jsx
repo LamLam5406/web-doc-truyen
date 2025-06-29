@@ -19,7 +19,7 @@ function Admin() {
     formData.append('chuongDau', chuongDau);
     formData.append('tieuDeChuong', tieuDeChuong);
 
-    const res = await fetch('http://localhost:5000/api/admin/truyen', {
+    const res = await fetch('https://web-doc-truyen.onrender.com/api/admin/truyen', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`

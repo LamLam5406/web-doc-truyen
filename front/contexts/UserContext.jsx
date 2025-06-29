@@ -9,7 +9,7 @@ export function UserProvider({ children }) {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      fetch('http://localhost:5000/api/user/me', {
+      fetch('https://web-doc-truyen.onrender.com/api/user/me', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
