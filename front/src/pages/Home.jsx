@@ -8,7 +8,7 @@ function Home() {
     // Gọi API khi load trang
     useEffect(() => {
       // Truyện đọc nhiều
-      fetch('http://localhost:5000/api/truyen/top-luot-doc')
+      fetch('https://web-doc-truyen.onrender.com/api/truyen/top-luot-doc')
         .then((res) => res.json())
         .then((data) => setTopLuotDoc(data))
         .catch((err) => console.error('Lỗi top-luot-doc:', err));
