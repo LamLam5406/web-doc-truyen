@@ -14,7 +14,7 @@ function Home() {
         .catch((err) => console.error('Lỗi top-luot-doc:', err));
 
       // Truyện mới cập nhật
-      fetch('http://localhost:5000/api/truyen/moi-cap-nhat')
+      fetch('https://web-doc-truyen.onrender.com/api/truyen/moi-cap-nhat')
         .then((res) => res.json())
         .then((data) => setMoiCapNhat(data))
         .catch((err) => console.error('Lỗi moi-cap-nhat:', err));
@@ -35,7 +35,7 @@ function Home() {
             }}
           >
             <Link to={`/truyen/${truyen._id}`} style={{ textDecoration: 'none', color: 'black' }}>
-              <img src={`http://localhost:5000${truyen.anhBia}`} alt={truyen.tieuDe} style={{ width: '200px', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
+              <img src={`https://web-doc-truyen.onrender.com${truyen.anhBia}`} alt={truyen.tieuDe} style={{ width: '200px', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
               <h3>{truyen.tieuDe}</h3>
             </Link>
           </div>
@@ -54,7 +54,7 @@ function Home() {
             }}
           >
             <Link to={`/truyen/${truyen._id}`} style={{ textDecoration: 'none', color: 'black' }}>
-              <img src={`http://localhost:5000${truyen.anhBia}`} alt={truyen.tieuDe} style={{ width: '200px', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
+              <img src={`https://web-doc-truyen.onrender.com${truyen.anhBia}`} alt={truyen.tieuDe} style={{ width: '200px', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
               <h3>{truyen.tieuDe}</h3>
             </Link>
           </div>

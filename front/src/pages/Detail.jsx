@@ -6,7 +6,7 @@ function Detail() {
     const [truyen, setTruyen] = useState(null);
 
     useEffect(() => {
-      fetch(`http://localhost:5000/api/truyen/${id}`)
+      fetch(`https://web-doc-truyen.onrender.com/api/truyen/${id}`)
         .then((res) => res.json())
         .then((data) => setTruyen(data))
         .catch((err) => console.error('Lỗi khi lấy truyện:', err));
@@ -17,7 +17,7 @@ function Detail() {
     return (
       <div style={{ padding: '20px' }}>
         <h1>{truyen.tieuDe}</h1>
-        <img src={`http://localhost:5000${truyen.anhBia}`} alt={truyen.tieuDe} width="150" />
+        <img src={`https://web-doc-truyen.onrender.com${truyen.anhBia}`} alt={truyen.tieuDe} width="150" />
         <p>{truyen.moTa}</p>
 
         <h3>📖 Danh sách chương:</h3>

@@ -9,7 +9,7 @@ function Read() {
   const { user } = useContext(UserContext);
   
   useEffect(() => {
-    fetch(`http://localhost:5000/api/truyen/${truyenId}`)
+    fetch(`https://web-doc-truyen.onrender.com/api/truyen/${truyenId}`)
       .then((res) => res.json())
       .then((data) => {
         setTruyen(data);
@@ -19,7 +19,7 @@ function Read() {
           setChuong({ data: chuong, index });
 
           // ✅ Gửi lịch sử đọc
-          fetch('http://localhost:5000/api/user/lichsu', {
+          fetch('https://web-doc-truyen.onrender.com/api/user/lichsu', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
